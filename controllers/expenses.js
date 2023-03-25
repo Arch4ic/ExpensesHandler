@@ -1,5 +1,5 @@
 const expensesRouter = require('express').Router()
-const pool = require('./utility/pool')
+const pool = require('../utility/pool')
 
 expensesRouter.get('/', async (req, res) => {
   try {

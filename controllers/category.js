@@ -1,5 +1,5 @@
 const categoryRouter = require('express').Router()
-const pool = require('./utility/pool')
+const pool = require('../utility/pool')
 
 categoryRouter.get('/', async (req, res) => {
   try {
