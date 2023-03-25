@@ -1,0 +1,204 @@
+---
+swagger: "2.0"
+info:
+  description: defaultDescription
+  version: "0.1"
+  title: defaultTitle
+paths:
+  /api/expenses/:id:
+    put:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model0'
+        x-examples:
+          application/json: |-
+            {
+                "expName": "Rent",
+                "expDate": "30.3",
+                "Cost": 650
+            }
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model1'
+        x-examples:
+          application/json: |-
+            {
+                "expName": "Rent",
+                "expDate": "30.3",
+                "Cost": 650
+            }
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+  /api/expenses:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model4'
+        x-examples:
+          application/json: |-
+            {
+                "expName": "Rent",
+                "expDate": "25.3",
+                "Cost": 550
+            }
+      responses:
+        "201":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+  /api/categories/:id:
+    put:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model2'
+        x-examples:
+          application/json: |-
+            {
+                "Name": "Loan"
+            }
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model3'
+        x-examples:
+          application/json: |-
+            {
+                "Name": "Loan"
+            }
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+  /api/categories:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - text/html
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: '#/definitions/Model5'
+        x-examples:
+          application/json: |-
+            {
+                "Name": "Travelling"
+            }
+      responses:
+        "201":
+          description: Definition generated from Swagger Inspector
+          schema:
+            type: string
+  /api/{param0}:
+    get:
+      produces:
+      - application/json
+      parameters:
+      - name: param0
+        in: path
+        description: 'Example values form path are: ''expenses'' and ''categories'''
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model7'
+  /api/{param1}/1:
+    get:
+      produces:
+      - application/json
+      parameters:
+      - name: param1
+        in: path
+        description: 'Example values form path are: ''expenses'' and ''categories'''
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model6'
+definitions:
+  Model0:
+    properties:
+      expName:
+        type: string
+      expDate:
+        type: string
+      Cost:
+        type: number
+        format: double
+  Model1_Array:
+    properties:
+      id:
+        type: integer
+        format: int32
+      expname:
+        type: string
+      expdate:
+        type: string
+      cost:
+        type: number
+        format: double
+      category_id:
+        type: string
+      name:
+        type: string
+
+  Model2:
+    properties:
+      Name:
+        type: string

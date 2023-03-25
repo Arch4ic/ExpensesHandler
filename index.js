@@ -1,3 +1,4 @@
+//main starting point for app
 const app = require('./app')
 const config = require('./utility/config')
 
