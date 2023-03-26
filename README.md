@@ -11,7 +11,7 @@ npm run start
 with nodemon
 npm run dev
 
-all configuaration happens through .env file
+all configuration happens through .env file
 
 PGUSER='pg username'
 PGHOST='host I used localhost'
