@@ -1,0 +1,17 @@
+CREATE TABLE category (
+  Id SERIAL NOT NULL PRIMARY KEY,
+  Name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE expensesList (
+  Id SERIAL NOT NULL PRIMARY KEY,
+  expName VARCHAR(50) NOT NULL
+  expdate VARCHAR(50),
+  Cost FLOAT NOT NULL,
+  category_id BIGINT REFERENCES category(Id) ON DELETE CASCADE
+);
+
+First I created table where new categories can be created and then table where new expenseses can be insterted and with category_id one to many relation is created
+
+INSERT INTO category(Name) VALUES("NewName");
+INSERT INTO expensesList(expName, expdate, Cost, category_id) VALUES("newExpense", "Today", 15.25, 1);
